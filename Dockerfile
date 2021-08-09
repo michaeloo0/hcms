@@ -9,4 +9,4 @@ COPY . .
 EXPOSE 8000
 RUN apt-get install git
 
-CMD ["gunicorn", "healthcare_information_system:wsgi:application", "--bind" "0.0.0.0:8000"]
+CMD ["gunicorn", "healthcare_information_system:wsgi:application", "-c", "./gunicorn.conf.py"]
