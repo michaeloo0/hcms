@@ -8,5 +8,5 @@ RUN pip3 install -r requirements.txt
 COPY . .
 EXPOSE 8000
 RUN apt-get install git
-
+RUN python manage.py collectstatic
 CMD ["gunicorn", "healthcare_information_system.wsgi:application", "-c", "./gunicorn.conf.py"]
