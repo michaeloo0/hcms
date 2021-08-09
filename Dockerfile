@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get install gcc python3-dev musl-dev git
+RUN apt-get git
 
 COPY requirements.txt ./
 RUN pip3 install -r requirements.txt
