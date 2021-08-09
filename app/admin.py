@@ -21,6 +21,7 @@ class PatientRecordsAdmin(admin.ModelAdmin):
     filter_horizontal = ('treatment_info', 'medical_history',)  
 
     def save_model(self, request, obj, form, change):
+     
         obj.attending = request.user
         obj.save()
     # 限制用户权限，只能看到自己编辑的文章

@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-82r_1)+30h=vbe@3ai(^-agl$67&dn_7+o^k&k00bwrd)vynlg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['hcms.xcfans.top']
+ALLOWED_HOSTS = ['hcms.xcfans.top', '127.0.0.1']
 
 
 # Application definition

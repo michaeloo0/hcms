@@ -73,7 +73,7 @@ def logout(request):
 def common_list(request):
     
     if not request.user.is_authenticated:
-        return render(request, 'login.html')
+        return redirect('login')
  
     qs = Group.objects.get(user=request.user)
 
@@ -81,6 +81,7 @@ def common_list(request):
         
         patient_records = PatientRecords.objects.filter(attending=request.user).all()
         context = {'patients':patient_records}
+        print(request.user)
         return render(request, 'doctor-list.html', context=context)
     
     if qs.name == 'AGENCY':
